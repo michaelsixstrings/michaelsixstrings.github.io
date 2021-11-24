@@ -19,12 +19,17 @@
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-end">
-                
+                <a href="/" class="navbar-item">
+                  HOME
+                </a>
+                <a href="/about" class="navbar-item">
+                  ABOUT
+                </a>
                 <a href="/buy" class="navbar-item">
-                  Shop
+                  SHOP
                 </a>
                 <a href="/contact" class="navbar-item">
-                  Contact Us
+                  CONTACT
                 </a>
               </div>
             </div>
@@ -39,8 +44,7 @@
 
           <div class="columns">
             <div class="column is-5">
-              <p>SIX STRINGS Shiraz 2021 Vintage</p>
-<p>(pricing in AUD including GST excluding postage)</p>
+              <p>SIX STRINGS McLaren Vale Shiraz 2021 Vintage</p>
 <table>
 <thead>
 <tr>
@@ -82,8 +86,8 @@
         <input type="tel" id="phone" />
     </div>
     <div class="row">
-        <span class="label">Quantity</span>
-        <input type="text" id="quantity" />
+        <span class="label">Bottles</span>
+        <input type="number" id="bottles" />
     </div>
     <div class="row">
         <span class="label">Comments</span>
@@ -92,20 +96,32 @@
     <div class="row shop-submit" id="submit">Purchase</div>
     <br />
 </div>
+<div class=>
+</div>
 <script type="text/javascript">
     document.getElementById('submit').onclick= async function(){
         let paylod = {
              name: document.getElementById('name').value, 
              email: document.getElementById('email').value,
              phone: document.getElementById('phone').value,
-             quantity: document.getElementById('quantity').value,
+             quantity: document.getElementById('bottles').value,
              comments: document.getElementById('comments').value
             }
-        let resp = await fetch('https://u-sws.in/six-strings/contact', {method:'POST', body: JSON.stringify(paylod)})
-        
+        let resp = await fetch('https://u-sws.in/six-strings/contact', {method:'POST', body: JSON.stringify(paylod), mode: 'cors'})
+        console.log(resp.ok);
 }
-
 </script>
+<style>
+    table {
+        max-width:400px;
+    }
+
+    .content table tbody td {
+        text-align: right;
+        padding-right:20px;
+    }
+
+</style>
 
               </div>
               <div class="column is-offset-1">
