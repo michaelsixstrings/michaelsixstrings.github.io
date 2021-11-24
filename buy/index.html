@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Buy our Wines</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr De Haviland">
+    <title>Shop</title>
   </head>
   <body>
     <section class="hero is-large">
@@ -18,14 +19,12 @@
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-end">
-                <a href="/" class="navbar-item">
-                  Vineyard
-                </a>
-                <a href="/about" class="navbar-item">
-                  About
-                </a>
+                
                 <a href="/buy" class="navbar-item">
-                  Buy wine
+                  Shop
+                </a>
+                <a href="/contact" class="navbar-item">
+                  Contact Us
                 </a>
               </div>
             </div>
@@ -35,15 +34,87 @@
 
       <article class="page-layout">
   <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
         <div class="content mt-5">
-          <h1>Buy our Wines</h1>
-          <p>Pricing and purchasing details</p>
+          <h1>Shop</h1>
 
-        </div>
-      </div>
+          <div class="columns">
+            <div class="column is-5">
+              <p>SIX STRINGS Shiraz 2021 Vintage</p>
+<p>(pricing in AUD including GST excluding postage)</p>
+<table>
+<thead>
+<tr>
+<th>Bottles</th>
+<th>Each</th>
+<th>Total (excluding freight)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$ 22.00</td>
+<td>$ 22.00</td>
+</tr>
+<tr>
+<td>6</td>
+<td>$ 20.00</td>
+<td>$ 120.00</td>
+</tr>
+<tr>
+<td>12</td>
+<td>$ 16.66</td>
+<td>$ 200.00</td>
+</tr>
+</tbody>
+</table>
+<p>Place an order below and we will e-mail you an invoice with freight costs and payment details</p>
+<div class="shop-details">
+    <div class="row">
+        <span class="label">Name</span>
+        <input type="text" id="name" />
     </div>
+    <div class="row">
+        <span class="label">E-mail</span>
+        <input type="email" id="email" />
+    </div>
+    <div class="row">
+        <span class="label">Phone</span>
+        <input type="tel" id="phone" />
+    </div>
+    <div class="row">
+        <span class="label">Quantity</span>
+        <input type="text" id="quantity" />
+    </div>
+    <div class="row">
+        <span class="label">Comments</span>
+        <input type="text" id="comments" />
+    </div>
+    <div class="row shop-submit" id="submit">Purchase</div>
+    <br />
+</div>
+<script type="text/javascript">
+    document.getElementById('submit').onclick= async function(){
+        let paylod = {
+             name: document.getElementById('name').value, 
+             email: document.getElementById('email').value,
+             phone: document.getElementById('phone').value,
+             quantity: document.getElementById('quantity').value,
+             comments: document.getElementById('comments').value
+            }
+        let resp = await fetch('https://u-sws.in/six-strings/contact', {method:'POST', body: JSON.stringify(paylod)})
+        
+}
+
+</script>
+
+              </div>
+              <div class="column is-offset-1">
+               <img class="content-img" src="/img/shiraz2021.png">
+               </div>
+
+          </div>
+            </div>
+            
   </div>
 </article>
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr De Haviland">
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <section class="hero is-large">
+      <div class="hero-head">
+                    <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                
+              </a>
+            </div>
+            <div id="navbarMenuHeroB" class="navbar-menu">
+              <div class="navbar-end">
+                
+                <a href="/buy" class="navbar-item">
+                  Shop
+                </a>
+                <a href="/contact" class="navbar-item">
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <article class="page-layout">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content mt-5">
+          <h1>Contact Us</h1>
+          <div>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <input type="tel" id="phone" placeholder="Your Phone">
+    <input type="text" id="message" placeholder="Your Message">
+    <button id="submit">Send</button>
+</div>
+<script type="text/javascript">
+    document.getElementById('submit').onclick= async function(){
+        let paylod = {
+             name:document.getElementById('name').value, 
+             email:document.getElementById('email').value,
+             phone:document.getElementById('phone').value,
+              message:document.getElementById('message').value
+            }
+        await fetch('https://u-sws.in/six-string/contact', {method:'POST', body: JSON.stringify(paylod)})
+}
+
+</script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+      <div class="hero-foot"></div>
+    </section>
+  </body>
+</html>
