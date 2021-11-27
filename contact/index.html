@@ -22,14 +22,15 @@
                 <a href="/" class="navbar-item">
                   HOME
                 </a>
-                <a href="/about" class="navbar-item">
-                  ABOUT
-                </a>
+                
                 <a href="/buy" class="navbar-item">
                   SHOP
                 </a>
                 <a href="/contact" class="navbar-item">
                   CONTACT
+                </a>
+                <a href="https://www.facebook.com" class="navbar-item">
+                  <img src="/img/f_logo_RGB-White_58.png" style="width: 58px; max-height: none; max-width: none;" >
                 </a>
               </div>
             </div>
@@ -43,25 +44,60 @@
       <div class="column is-8 is-offset-2">
         <div class="content mt-5">
           <h1>Contact Us</h1>
-          <div>
-    <input type="text" id="name" placeholder="Your Name">
-    <input type="email" id="email" placeholder="Your Email">
-    <input type="tel" id="phone" placeholder="Your Phone">
-    <input type="text" id="message" placeholder="Your Message">
-    <button id="submit">Send</button>
+          <p><span class="form-instructions">Need to get in contact? Submit the form below and we'll get back to you.</span></p>
+<div class="form-section">
+    <div class="form-details">
+        <div class="row">
+            <span class="label">Name</span>
+            <input type="text" id="name" />
+        </div>
+        <div class="row">
+            <span class="label">E-mail</span>
+            <input type="email" id="email" />
+        </div>
+        <div class="row">
+            <span class="label">Phone</span>
+            <input type="tel" id="phone" />
+        </div>
+        <div class="row">
+            <span class="label">Comments</span>
+            <input type="text" id="comments" />
+        </div>
+        <div class="row form-submit" id="submit">Submit</div>
+        <br />
+    </div>
 </div>
 <script type="text/javascript">
-    document.getElementById('submit').onclick= async function(){
+    let form = document.getElementsByClassName('form-details')[0]
+    document.getElementById('submit').onclick = async function(){
+        document.getElementsByClassName('form-instructions')[0].classList.add('hidden');
+        document.getElementById('submit').onclick = null;
         let paylod = {
-             name:document.getElementById('name').value, 
-             email:document.getElementById('email').value,
-             phone:document.getElementById('phone').value,
-              message:document.getElementById('message').value
+            name: document.getElementById('name').value, 
+             email: document.getElementById('email').value,
+             phone: document.getElementById('phone').value,
+             comments: document.getElementById('comments').value
             }
-        await fetch('https://u-sws.in/six-string/contact', {method:'POST', body: JSON.stringify(paylod)})
-}
-
+        document.getElementsByClassName('form-details')[0].classList.add('no-border');
+        form.innerHTML = '<div class="busy"></div>';
+        let resp = await fetch('https://u-sws.in/six-strings/contact', {method:'POST', body: JSON.stringify(paylod), mode: 'cors'})
+        if (resp.ok) {
+            form.innerHTML = '<div><p>Your details have been successfully submitted.</p><p>We wil be in touch shortly.</p></div>'
+        } else {
+            form.innerHTML = '<div><p>An error has occured while processing your details.</p><p>Please check your details and try again.</p></div>'
+        }   
+    }
 </script>
+<style>
+    table {
+        max-width:400px;
+    }
+
+    .content table tbody td {
+        text-align: right;
+        padding-right:20px;
+    }
+</style>
 
         </div>
       </div>
