@@ -9,7 +9,9 @@
     --black1: #10181F;
     --red1: #EC0044;
     --red2: #AC063C;
-  }
+    --border: #0b2000;
+    /* --border: #002F56; */
+}
   
 .subtitle {
     font-size: 3.0em;

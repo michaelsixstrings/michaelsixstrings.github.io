@@ -1,262 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr De Haviland">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie Flower">
+    <title>About us</title>
+  </head>
+  <body>
+    <section class="hero is-large">
+      <div class="hero-head">
+                    <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                
+              </a>
+            </div>
+            <div id="navbarMenuHeroB" class="navbar-menu">
+              <div class="navbar-end">
+                <a href="/" class="navbar-item">
+                  HOME
+                </a>
+                
+                <a href="/buy" class="navbar-item">
+                  SHOP
+                </a>
+                <a href="/contact" class="navbar-item">
+                  CONTACT
+                </a>
+                <a href="https://www.facebook.com" class="navbar-item">
+                  <img src="/img/f_logo_RGB-White_58.png" style="width: 58px; max-height: none; max-width: none;" >
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <article class="page-layout">
+
 <style>
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-}
-
-.timeline {
-  position: relative;
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background: #006E51;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1px;
-}
-
-.container {
-  padding: 15px 30px;
-  position: relative;
-  background: inherit;
-  width: 50%;
-}
-
-.container.left {
-  left: 0;
-}
-
-.container.right {
-  left: 50%;
-}
-
-.container::after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: calc(50% - 8px);
-  right: -8px;
-  background: #ffffff;
-  border: 2px solid #006E51;
-  border-radius: 16px;
-  z-index: 1;
-}
-
-.container.right::after {
-  left: -8px;
-}
-
-.container::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  top: calc(50% - 1px);
-  right: 8px;
-  background: #006E51;
-  z-index: 1;
-}
-
-.container.right::before {
-  left: 8px;
-}
-
-.container .date {
-  position: absolute;
-  display: inline-block;
-  top: calc(50% - 8px);
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #006E51;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  z-index: 1;
-}
-
-.container.left .date {
-  right: -75px;
-}
-
-.container.right .date {
-  left: -75px;
-}
-
-.container .icon {
-  position: absolute;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 9px 0;
-  top: calc(50% - 20px);
-  background: #F6D155;
-  border: 2px solid #006E51;
-  border-radius: 40px;
-  text-align: center;
-  font-size: 18px;
-  color: #006E51;
-  z-index: 1;
-}
-
-.container.left .icon {
-  right: 56px;
-}
-
-.container.right .icon {
-  left: 56px;
-}
-
-.container .content {
-  padding: 30px 90px 30px 30px;
-  background: #F6D155;
-  position: relative;
-  border-radius: 0 500px 500px 0;
-}
-
-.container.right .content {
-  padding: 30px 30px 30px 90px;
-  border-radius: 500px 0 0 500px;
-}
-
-.container .content h2 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  font-weight: normal;
-  color: #006E51;
-}
-
-.container .content p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 22px;
-  color: #000000;
-}
-
-@media (max-width: 767.98px) {
-  .timeline::after {
-    left: 90px;
+  table{
+    margin-left:auto;
+    margin-right:auto;
   }
 
-  .container {
-    width: 100%;
-    padding-left: 120px;
-    padding-right: 30px;
+  td {
+    padding:20px;
   }
 
-  .container.right {
-    left: 0%;
+  .timeline-left .timeline-text, .timeline-left img {
+    float: right;
   }
 
-  .container.left::after, 
-  .container.right::after {
-    left: 82px;
+  .timeline-text {
+    width: 80%;
+    font-family:Indie Flower;
+    font-size:24px;
+    max-width:450px;
   }
 
-  .container.left::before,
-  .container.right::before {
-    left: 100px;
-    border-color: transparent #006E51 transparent transparent;
+  .timeline-left .timeline-text {
+    text-align: right;
   }
 
-  .container.left .date,
-  .container.right .date {
-    right: auto;
-    left: 15px;
+  .timeline-right {
+    float: left;
   }
 
-  .container.left .icon,
-  .container.right .icon {
-    right: auto;
-    left: 146px;
+  .timeline-title {
+    font-weight: bold;
+    font-size:38px;
+    text-transform: uppercase;
   }
 
-  .container.left .content,
-  .container.right .content {
-    padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
+  table {
+    border-collapse: collapse;
   }
-}
 
-img {
-  width:100px;
-}
-
+  table tr:nth-child(odd) td:last-child {
+    border-style: hidden; 
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 10px 0px 20px -10px var(--border); 
+  }
+  table tr:nth-child(even) td:first-child {
+    border-style: hidden; 
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: -10px 0px 20px -10px var(--border); 
 </style>
-  <div class="timeline">
-  <div class="container left">
-    <div class="content">
-      <h2>Vine Stock</h2>
-      <p>
-        Locally source the best vintage vine stock available and prepare for propogation.
-      </p>
-      <img src="/img/about-01.png">
-    </div>
-  </div>
-  <div class="container right">
-    <div class="date">22 Oct</div>
-    <i class="icon fa fa-gift"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="date">10 Jul</div>
-    <i class="icon fa fa-user"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="date">18 May</div>
-    <i class="icon fa fa-running"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="date">10 Feb</div>
-    <i class="icon fa fa-cog"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="date">01 Jan</div>
-    <i class="icon fa fa-certificate"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
+
+<div>
+  <table>
+    <tbody>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <div class="timeline-text">
+              <span class="timeline-title">Vine stock</span>
+              <br />
+              We source the very best old growth vintage vine stock from the local region.
+              <br />
+              The stock is prepared and given just the right conditions to take root.
+            </div>
+          </div>
+        </td>
+        <td style="border-top:none; border-top-right-radius:0px;>
+          <div class="timeline-right">
+            <img class="content-img" src="/img/about-01.png">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <img class="content-img" src="/img/about-02.png">
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <div class="timeline-text">
+              <span class="timeline-title">Rooted vines</span>
+              <br />
+              After several weeks of careful monitoring our vine stock takes root.
+              <br />
+              The root stock is carefully transferred to our nursery vineyard.
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <div class="timeline-text">
+              <span class="timeline-title">The nursery</span>
+              <br />
+              Shhh.. Don't wake the babies.
+              <br />
+
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <img class="content-img" src="/img/about-03.png">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <img class="content-img" src="/img/about-04.png">
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <div class="timeline-text">
+              <span class="timeline-title">Growth</span>
+              <br />
+              Watch them grow.
+              <br />
+              Keep the weeds (and Kangaroos) away.
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <div class="timeline-text">
+              <span class="timeline-title">Try to stay currant</span>
+              <br />
+
+              <br />
+
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <img class="content-img" src="/img/about-05.png">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <img class="content-img" src="/img/about-06.png">
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <div class="timeline-text">
+              <span class="timeline-title">Grapes</span>
+              <br />
+              Time to start monitoring the sugar levels
+              <br />
+
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <div class="timeline-text">
+              <span class="timeline-title">Harvest time</span>
+              <br />
+              Hand pick
+              <br />
+              It's a big job, so we usually need to start before the sun comes up.
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <img class="content-img" src="/img/about-07.png">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <img class="content-img" src="/img/about-08.png">
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <div class="timeline-text">
+              <span class="timeline-title">Squish those grapes</span>
+              <br />
+              Preferably keep the waste in the press
+              <br />
+
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <div class="timeline-text">
+              <span class="timeline-title">Diversity hire</span>
+              <br />
+              We give our more flamboyant friends a job when no-one else will hire them.
+              <br />
+
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <img class="content-img" src="/img/about-09.png">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <img class="content-img" src="/img/about-10.png">
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <div class="timeline-text">
+              <span class="timeline-title">Free run</span>
+              <br />
+
+              <br />
+
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <div class="timeline-text">
+              <span class="timeline-title">Fermentation</span>
+              <br />
+              Plunge them twice a day
+              <br />
+              Constantly watch the alchohol, sugar and acidity.
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <img class="content-img" src="/img/about-11.png">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <img class="content-img" src="/img/about-12.png">
+          </div>
+        </td>
+        <td>
+          <div class="timeline-right">
+            <div class="timeline-text">
+              <span class="timeline-title">Roll out the barrel</span>
+              <br />
+
+              <br />
+
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="timeline-left">
+            <div class="timeline-text">
+              <span class="timeline-title">Plonk!</span>
+              <br />
+
+              <br />
+
+            </div>
+          </div>
+        </td>
+        <td style="border-bottom:none; border-bottom-right-radius:0px;">
+          <div class="timeline-right">
+            <img class="content-img" src="/img/about-13.png">
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
 </div>
+</article>
+
+      <div class="hero-foot"></div>
+    </section>
+  </body>
+</html>
