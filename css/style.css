@@ -10,24 +10,30 @@
     --red1: #EC0044;
     --red2: #AC063C;
     --border: #0b2000;
-    /* --border: #002F56; */
 }
   
-.subtitle {
-    font-size: 3.0em;
-    font-family: Mr De Haviland;
-    width: max-content;
+.tagline {
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    color: #fff;
-    background: var(--red1);
-    width: 100%;
-    border-radius: 0px 0px 20px 20px;
-    text-align: center;
+    left: 0;
+    right: 0;
+    width: 300px;
+    bottom: 5%;
+    transform: translateY(-50%);
 }
+
+.logo {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
  .navbar {
      min-height: 5em;
     }
@@ -40,7 +46,6 @@
 
 .hero-img {
     position: relative;
-    opacity: 0.6;
 }
 
 .navbar-item {
@@ -51,20 +56,6 @@
 
 .body {
     background: var(--blue1);
-}
-
-.logo-display {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    width: 400px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--blue3);
-    border-radius: 20px;
-
 }
 
 .form-details {
