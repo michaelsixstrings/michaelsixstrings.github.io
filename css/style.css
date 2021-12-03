@@ -57,29 +57,7 @@
     top:50px;
     position: absolute;
 }
-@media only screen and (max-width: 800px) {
- .hero-img {
-     visibility : collapse;
-    }
-    .hero-img-p {
-        visibility : visible;
-       }
-     }
 
-     @media only screen and (min-width: 801px) {
-        .hero-img {
-            visibility : visible;
-            height: 100%;
-            overflow: hidden;;
-           }
-           .hero-img-p {
-               visibility : collapse;
-              }
-            }
-
-            .content {
-                margin-left:15px;
-            }
        
 .navbar-item {
     color: var(--blue3);
@@ -97,6 +75,7 @@
     padding: 20px;
     border-radius: 5px;
     max-width: 500px;
+    width:95%;
 }
 .form-details .label {
     font-weight: bold;
@@ -106,7 +85,7 @@
 .form-details input {
     float:left;
     margin-top: 8px;
-    width: 300px;
+    width: 60%;
     height: 2.1em;
 }
 
@@ -124,7 +103,8 @@
 .navbar-burger span {
     left: calc(50% - 15px);
     width: 30px;
- }
+    color: #fff; 
+}
 
 .row {
     clear: both;
@@ -163,6 +143,31 @@
 .navbar-burger {
     color: #fff;
 }
+
+@media only screen and (max-width: 800px) {
+    .hero-img {
+        visibility : collapse;
+    }
+    .hero-img-p {
+        visibility : visible;
+    }
+    .content {
+        margin-left:15px;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .hero-img {
+        visibility : visible;
+        height: 100%;
+        overflow: hidden;;
+    }
+    .hero-img-p {
+        visibility : collapse;
+    }
+
+}
+
 
 
 @keyframes rotate-s-loader {
