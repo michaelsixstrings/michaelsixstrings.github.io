@@ -33,16 +33,20 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.hero-head{
+    background: var(--blue1);
+}
+.hero-head::after {
+    background-image:url("https://www.six-strings.com.au/img/border-square.svg");
+    content: " ";
+    display: block;
+    height: 3px;
+    width: 100%;
+}
 
- .navbar {
-     min-height: 5em;
-    }
     .navbar-menu {
         font-size: 1.8em;
     }
-.hero-head {
-    background: var(--blue1);
-}
 
 .hero-img {
     position: relative;
