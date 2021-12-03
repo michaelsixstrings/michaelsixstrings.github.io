@@ -89,6 +89,10 @@
     height: 2.1em;
 }
 
+.form-section{
+    width:95%;
+}
+
 .form-submit {
     float: right;
     border:1px solid var(--blue1);
