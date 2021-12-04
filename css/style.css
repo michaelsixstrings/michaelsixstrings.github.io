@@ -36,21 +36,10 @@
 .hero-head{
     background: var(--blue1);
 }
-/* .hero-head::after {
-    background-image:url("https://www.six-strings.com.au/img/border-square.svg");
-    content: " ";
-    display: block;
-    height: 3px;
-    width: 100%;
-} */
 
     .navbar-menu {
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
-
-/* .hero-img {
-    position: relative;
-} */
 
 .hero-img-p {
     height: 100%;
@@ -171,8 +160,6 @@
     }
 
 }
-
-
 
 @keyframes rotate-s-loader {
     from {
